@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>ЯсенПуть</title>
+</head>
+<body class="main">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand black logo" href="index.php"><img src="img/logo.svg" alt="" class="logo"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active black" aria-current="page" href="index.php">Главная</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active black" href="onas.php">О нас</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active black" href="news.php">Новости</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link activ black" aria-disabled="true" href="gruzovik.php">Предоставить грузовик</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link activ black" aria-disabled="true" href="contact.php">Контакты</a>
+                  </li>
+                </ul>
+                                  <!-- Кнопка-триггер модального окна апвторизации-->
+                  <button type="button" class="btn btnt btn-outline-success margin_left margin_r" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Вход
+                  </button>
+
+                  <!-- Модальное окно автоизации -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Авторизация</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                        </div>
+                        <div class="modal-body">
+                        <form action="project/loginpr.php" method="POST" >
+                          <div class="mb-3">
+                              <label for="exampleInputEmail1" class="form-label">Email</label>
+                              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                              <div id="emailHelp" class="form-text">Мы не сообщвем вашу почту стороним лицам.</div>
+                          </div>
+                          <div class="mb-3">
+                              <label for="exampleInputPassword1" class="form-label">Пароль</label>
+                              <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                          </div>
+                          <button type="submit" class="btn btn-primary knopka">Войти</button>
+                        </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                                  <!-- Кнопка-триггер модального окна регистрации-->
+                  <button type="button" class="btn btnt btn-outline-success margin_left margin_r" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                    Регистрация
+                  </button>
+
+                  <!-- Модальное окно аврегистрации -->
+                  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Регистрация</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                        </div>
+                        <div class="modal-body">
+                        <form action="project/regpr.php" method="POST" >
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">ФИО</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1" name="fio" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Телефон</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1" name="phone" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" required>
+                                <div id="emailHelp" class="form-text">Мы не сообщвем вашу почту стороним лицам.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Пароль</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" name="password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary knopka" name="submit">Зарегистрироваться</button>
+                            </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                                </div>
+            </div>
+          </nav>
+    </header>
+    <hr>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap.bundle.js"></script>    
+    <section class="margin-top">
+    <h1 class="white d-flex centr margin-top">Новости</h1>
+           <a href="news.php">
+      <div class="card mb-3" style="width: 100em;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="img/main2.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+        <h5 class="card-title black">Нужна быстрая доставка? ЯсенПуть представляет услугу “Экспресс-доставка”</h5>
+        <p class="card-text black">Грузовая компания ЯсенПуть рада сообщить о запуске новой услуги – “Экспресс-доставка”, которая позволит нашим клиентам получить груз в максимально короткие сроки. Эта услуга идеально подходит для тех случаев, когда скорость доставки является критически важным фактором.
+
+“Экспресс-доставка” от ЯсенПуть – это:
+
+Приоритетная обработка заказов
+Кратчайшие сроки доставки
+Персональный менеджер, который будет контролировать процесс перевозки
+Отслеживание груза в режиме реального времени
+Мы гарантируем доставку груза в [Укажите сроки доставки: например, в течение 24 часов по городу, в течение 48 часов по региону]. Услуга “Экспресс-доставка” доступна для всех типов грузов, за исключением [Укажите исключения, если есть: например, опасные грузы, негабаритные грузы].
+
+“Мы понимаем, что в современном бизнесе скорость имеет решающее значение. Услуга “Экспресс-доставка” позволит нашим клиентам оперативно реагировать на потребности рынка и оставаться на шаг впереди конкурентов”, - отметил [Имя и должность представителя компании].</p>
+            </div>
+            </div>
+        </div>
+        </div>
+            </a>
+               <a href="news.php">
+      <div class="card mb-3" style="width: 100em;">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="img/gruzoperevozki.jpg" class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+        <h5 class="card-title black">ЯсенПуть инвестирует в будущее: Новый автопарк и филиал для лучшего обслуживания клиентов</h5>
+        <p class="card-text black">Грузовая компания ЯсенПуть объявляет о значительном расширении автопарка и открытии нового филиала в городе [Название города]! Это важный шаг в развитии компании, направленный на повышение качества обслуживания клиентов и расширение географии предоставляемых услуг.
+
+В рамках расширения автопарка были приобретены [Количество] новых современных грузовиков марки [Марка грузовиков] различной грузоподъемности, включая [Перечислите типы грузовиков: рефрижераторы, тентованные, бортовые]. Новые автомобили соответствуют самым высоким экологическим стандартам и оснащены современными системами навигации и безопасности, что гарантирует своевременную и безопасную доставку грузов.
+
+Открытие филиала в [Название города] позволит компании ЯсенПуть оперативно реагировать на потребности клиентов в [Регион], сократить сроки доставки и предложить более выгодные тарифы. В новом филиале будут доступны все основные услуги компании, включая:
+
+Внутригородские и междугородние перевозки
+Перевозку сборных грузов
+Перевозку негабаритных и тяжеловесных грузов
+Услуги складского хранения
+“Мы уверены, что расширение автопарка и открытие нового филиала позволит нам стать еще ближе к нашим клиентам и предложить им логистические решения высочайшего качества”, - заявил [Имя и должность представителя компании].</p>
+            </div>
+            </div>
+        </div>
+        </div>
+            </a>
+            </section>
+   
+     
+<footer>
+     <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand black logo" href="index.php"><img src="img/logo.svg" alt="" class="logo"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active white" aria-current="page" href="index.php">Главная</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active white" href="onas.php">О нас</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active white" href="news.php">Новости</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link activ white" aria-disabled="true" href="gruzovik.php">Предоставить грузовик</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link activ white" aria-disabled="true" href="contact.php">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+              <a class="navbar-brand black logo" href="index.php"><img src="img/logo.svg" alt="" class="logo"></a>
+          </nav>
+     </footer>
+</body>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+</html>
